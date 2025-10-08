@@ -1,65 +1,85 @@
+/* ===== Unified, cleaned style.css =====
+   - Single source of truth for colors: --bg-color, --text-color, --accent
+   - Panel background for dropdown: --panel-bg
+   - Dropdown anchored below header using calc(100% + 8px)
+   - No undefined variable names
+*/
+
 :root {
   --accent: #007bff;
-  --bg-light: #f9f9f9;
-  --text-light: #222;
-  --bg-dark: #121212;
-  --text-dark: #eaeaea;
+
+  /* page colors (light defaults) */
+  --bg-color: #f9f9f9;
+  --text-color: #222222;
+
+  /* UI surface colors */
+  --panel-bg: rgba(255,255,255,0.95); /* for dropdowns, panels */
+  --card-bg: rgba(255,255,255,0.8);
+  --card-border: #ccc;
+  --header-bg: rgba(255,255,255,0.85);
+  --footer-border: #ddd;
+
+  --shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Dark-mode overrides (keeps same variable names) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #121212;
+    --text-color: #eaeaea;
+
+    --panel-bg: rgba(18,18,18,0.95);
+    --card-bg: rgba(30,30,30,0.9);
+    --card-border: #333;
+    --header-bg: rgba(18,18,18,0.9);
+    --footer-border: #333;
+
+    --shadow: 0 4px 12px rgba(0,0,0,0.6);
+  }
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* helps anchor links not hide under header if header ever becomes fixed */
 }
 
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
-/* Light mode */
-body {
-  background-color: var(--bg-light);
-  color: var(--text-light);
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: var(--bg-dark);
-    color: var(--text-dark);
-  }
-}
-
+/* ===== Header / Nav ===== */
 header {
-  position: fixed;
-  width: 100%;
-  top: 0;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #ddd;
-  z-index: 10;
-}
-
-@media (prefers-color-scheme: dark) {
-  header {
-    background: rgba(18, 18, 18, 0.9);
-    border-bottom: 1px solid #333;
-  }
-}
-
-.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  background-color: var(--header-bg);
+  color: var(--text-color);
+  box-shadow: var(--shadow);
+  position: relative; /* anchor for absolute dropdown */
+  z-index: 1000;
 }
 
+/* If you have a .navbar element elsewhere, it's safe:
+   .navbar { display:flex; gap:... } */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Nav links */
 .nav-links {
   display: flex;
-  list-style: none;
   gap: 1.5rem;
+  list-style: none;
   margin: 0;
   padding: 0;
+  align-items: center;
 }
 
 .nav-links a {
@@ -72,6 +92,17 @@ header {
   color: var(--accent);
 }
 
+/* Mobile menu toggle button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* ===== Sections / Content ===== */
 .section {
   padding: 6rem 2rem;
   max-width: 900px;
@@ -97,17 +128,10 @@ h2 {
 }
 
 .project-card {
-  border: 1px solid #ccc;
+  border: 1px solid var(--card-border);
   padding: 1rem;
   border-radius: 8px;
-  background: rgba(255,255,255,0.8);
-}
-
-@media (prefers-color-scheme: dark) {
-  .project-card {
-    background: rgba(30,30,30,0.9);
-    border: 1px solid #333;
-  }
+  background: var(--card-bg);
 }
 
 .project-card img,
@@ -135,44 +159,40 @@ footer {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid var(--footer-border);
 }
 
-/* Responsive Navigation */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-
+/* ===== Responsive Navigation (mobile) ===== */
 @media (max-width: 768px) {
-  header {
-    position: relative;
+  .menu-toggle {
+    display: block;
   }
 
+  /* Dropdown stays hidden unless .active is applied */
   .nav-links {
-    position: absolute;
-    top: 60px;
-    right: 20px;
     display: none;
-    flex-direction: column;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    padding: 1rem;
+    position: absolute;
+    /* anchor just below the header regardless of header height */
+    top: calc(100% + 8px);
+    right: 20px;
+    width: 220px;
+    padding: 0.75rem 1rem;
     border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    width: 200px;
-    z-index: 1000;
+    background: var(--panel-bg);
+    color: var(--text-color);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    z-index: 1001;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: stretch;
   }
 
   .nav-links.active {
     display: flex;
   }
 
-  .menu-toggle {
-    display: block;
+  .nav-links a {
+    padding: 0.4rem 0;
+    text-align: right;
   }
 }
