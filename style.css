@@ -1,57 +1,46 @@
-/* ===== Unified, cleaned style.css =====
-   - Single source of truth for colors: --bg-color, --text-color, --accent
-   - Panel background for dropdown: --panel-bg
-   - Dropdown anchored below header using calc(100% + 8px)
-   - No undefined variable names
-*/
-
+/* ======= Base Color System ======= */
 :root {
   --accent: #007bff;
-
-  /* page colors (light defaults) */
   --bg-color: #f9f9f9;
   --text-color: #222222;
-
-  /* UI surface colors */
-  --panel-bg: rgba(255,255,255,0.95); /* for dropdowns, panels */
-  --card-bg: rgba(255,255,255,0.8);
-  --card-border: #ccc;
-  --header-bg: rgba(255,255,255,0.85);
+  --panel-bg: rgba(255, 255, 255, 0.95);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: #d0d0d0;
+  --header-bg: rgba(255, 255, 255, 0.85);
   --footer-border: #ddd;
-
-  --shadow: 0 2px 8px rgba(0,0,0,0.05);
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-/* Dark-mode overrides (keeps same variable names) */
+/* ======= Dark Mode Overrides ======= */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #121212;
     --text-color: #eaeaea;
-
-    --panel-bg: rgba(18,18,18,0.95);
-    --card-bg: rgba(30,30,30,0.9);
+    --panel-bg: rgba(24, 24, 24, 0.95);
+    --card-bg: rgba(30, 30, 30, 0.9);
     --card-border: #333;
-    --header-bg: rgba(18,18,18,0.9);
+    --header-bg: rgba(18, 18, 18, 0.9);
     --footer-border: #333;
-
-    --shadow: 0 4px 12px rgba(0,0,0,0.6);
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   }
 }
 
+/* ======= Global Layout ======= */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px; /* helps anchor links not hide under header if header ever becomes fixed */
+  scroll-padding-top: 80px;
 }
 
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  transition: background-color 0.3s, color 0.3s;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
 }
 
-/* ===== Header / Nav ===== */
+/* ======= Header and Navigation ======= */
 header {
   display: flex;
   justify-content: space-between;
@@ -60,39 +49,39 @@ header {
   background-color: var(--header-bg);
   color: var(--text-color);
   box-shadow: var(--shadow);
-  position: relative; /* anchor for absolute dropdown */
+  position: relative;
   z-index: 1000;
 }
 
-/* If you have a .navbar element elsewhere, it's safe:
-   .navbar { display:flex; gap:... } */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
 }
 
-/* Nav links */
 .nav-links {
   display: flex;
   gap: 1.5rem;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
-  align-items: center;
 }
 
 .nav-links a {
-  color: inherit;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
+.nav-links a:hover,
+.nav-links a.active {
   color: var(--accent);
 }
 
-/* Mobile menu toggle button */
 .menu-toggle {
   display: none;
   background: none;
@@ -102,44 +91,73 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Sections / Content ===== */
+/* ======= Sections ======= */
 .section {
   padding: 6rem 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-h2 {
-  border-bottom: 2px solid var(--accent);
-  display: inline-block;
+.section h1,
+.section h2 {
+  font-weight: 700;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
 
-.profile-pic {
-  max-width: 180px;
-  border-radius: 50%;
-  margin-top: 1rem;
+.section h1 {
+  font-size: 2rem;
 }
 
+.section h2 {
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.section p {
+  font-size: 1.05rem;
+  color: var(--text-color);
+  max-width: 750px;
+}
+
+/* ======= Project Cards ======= */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 
 .project-card {
   border: 1px solid var(--card-border);
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--card-bg);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 .project-card img,
 .project-card iframe {
   width: 100%;
-  border-radius: 4px;
+  border-radius: 6px;
+  margin-bottom: 0.75rem;
 }
 
+.project-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* ======= Buttons ======= */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -147,44 +165,45 @@ h2 {
   background-color: var(--accent);
   color: white;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   font-weight: 500;
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  background-color: #0065d1;
+  transform: translateY(-2px);
 }
 
+/* ======= Footer ======= */
 footer {
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
   border-top: 1px solid var(--footer-border);
+  margin-top: 2rem;
 }
 
-/* ===== Responsive Navigation (mobile) ===== */
+/* ======= Responsive Navigation ======= */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
   }
 
-  /* Dropdown stays hidden unless .active is applied */
   .nav-links {
     display: none;
     position: absolute;
-    /* anchor just below the header regardless of header height */
     top: calc(100% + 8px);
     right: 20px;
     width: 220px;
     padding: 0.75rem 1rem;
     border-radius: 8px;
     background: var(--panel-bg);
-    color: var(--text-color);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    z-index: 1001;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: stretch;
+    gap: 0.75rem;
+    align-items: flex-end;
+    z-index: 1001;
   }
 
   .nav-links.active {
@@ -192,7 +211,8 @@ footer {
   }
 
   .nav-links a {
-    padding: 0.4rem 0;
     text-align: right;
+    font-size: 1rem;
+    padding: 0.4rem 0;
   }
 }
