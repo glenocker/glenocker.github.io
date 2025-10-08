@@ -1,34 +1,33 @@
-/* ======= Base Color System ======= */
+/* ===== Unified Color + Design System ===== */
 :root {
   --accent: #007bff;
   --bg-color: #f9f9f9;
-  --text-color: #222222;
-  --panel-bg: rgba(255, 255, 255, 0.95);
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --card-border: #d0d0d0;
-  --header-bg: rgba(255, 255, 255, 0.85);
+  --text-color: #222;
+  --panel-bg: rgba(255,255,255,0.95);
+  --card-bg: #fff;
+  --card-border: #ddd;
+  --header-bg: rgba(255,255,255,0.85);
   --footer-border: #ddd;
-  --shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* ======= Dark Mode Overrides ======= */
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #121212;
     --text-color: #eaeaea;
-    --panel-bg: rgba(24, 24, 24, 0.95);
-    --card-bg: rgba(30, 30, 30, 0.9);
+    --panel-bg: rgba(24,24,24,0.95);
+    --card-bg: #1c1c1c;
     --card-border: #333;
-    --header-bg: rgba(18, 18, 18, 0.9);
+    --header-bg: rgba(18,18,18,0.9);
     --footer-border: #333;
-    --shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    --shadow: 0 4px 12px rgba(0,0,0,0.6);
   }
 }
 
-/* ======= Global Layout ======= */
+/* ===== Global Layout ===== */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 80px;
+  scroll-padding-top: 70px;
 }
 
 body {
@@ -36,26 +35,28 @@ body {
   font-family: "Inter", "Segoe UI", Roboto, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
+  line-height: 1.7;
+  font-size: 1.05rem;
   transition: background-color 0.3s ease, color 0.3s ease;
-  line-height: 1.6;
 }
 
-/* ======= Header and Navigation ======= */
+/* ===== Header / Navbar ===== */
 header {
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   background-color: var(--header-bg);
-  color: var(--text-color);
   box-shadow: var(--shadow);
-  position: relative;
   z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
 .logo {
-  font-size: 1.4rem;
   font-weight: 700;
+  font-size: 1.5rem;
   color: var(--accent);
   letter-spacing: 0.5px;
 }
@@ -64,9 +65,6 @@ header {
   display: flex;
   gap: 1.5rem;
   align-items: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .nav-links a {
@@ -91,39 +89,52 @@ header {
   color: var(--text-color);
 }
 
-/* ======= Sections ======= */
+/* ===== Hero (Home) Section ===== */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 85vh;
+  background: linear-gradient(to bottom right, var(--accent) 5%, transparent 60%);
+  border-radius: 0 0 40px 40px;
+  box-shadow: inset 0 -10px 40px rgba(0, 0, 0, 0.1);
+}
+
+#home h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.5rem;
+}
+
+#home p {
+  font-size: 1.15rem;
+  max-width: 700px;
+  color: var(--text-color);
+  opacity: 0.9;
+}
+
+/* ===== Section Layout ===== */
 .section {
-  padding: 6rem 2rem;
+  padding: 5rem 2rem;
   max-width: 900px;
   margin: auto;
 }
 
-.section h1,
 .section h2 {
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-.section h1 {
-  font-size: 2rem;
-}
-
-.section h2 {
-  font-size: 1.6rem;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
   display: inline-block;
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .section p {
   font-size: 1.05rem;
   color: var(--text-color);
-  max-width: 750px;
 }
 
-/* ======= Project Cards ======= */
+/* ===== Projects ===== */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -133,40 +144,40 @@ header {
 
 .project-card {
   border: 1px solid var(--card-border);
-  padding: 1rem;
-  border-radius: 10px;
   background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 12px;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img,
 .project-card iframe {
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
   margin-bottom: 0.75rem;
 }
 
 .project-card h3 {
-  margin: 0.5rem 0;
-  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
 }
 
-/* ======= Buttons ======= */
+/* ===== Buttons ===== */
 .btn {
   display: inline-block;
-  margin-top: 1rem;
-  padding: 0.6rem 1.2rem;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
   background-color: var(--accent);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: 500;
+  border-radius: 8px;
+  font-weight: 600;
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
@@ -175,16 +186,17 @@ header {
   transform: translateY(-2px);
 }
 
-/* ======= Footer ======= */
+/* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 1.5rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
   border-top: 1px solid var(--footer-border);
-  margin-top: 2rem;
+  margin-top: 3rem;
+  opacity: 0.9;
 }
 
-/* ======= Responsive Navigation ======= */
+/* ===== Mobile Menu ===== */
 @media (max-width: 768px) {
   .menu-toggle {
     display: block;
@@ -193,17 +205,16 @@ footer {
   .nav-links {
     display: none;
     position: absolute;
-    top: calc(100% + 8px);
+    top: calc(100% + 10px);
     right: 20px;
     width: 220px;
-    padding: 0.75rem 1rem;
-    border-radius: 8px;
+    padding: 1rem;
+    border-radius: 10px;
     background: var(--panel-bg);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     flex-direction: column;
     gap: 0.75rem;
     align-items: flex-end;
-    z-index: 1001;
   }
 
   .nav-links.active {
@@ -211,8 +222,18 @@ footer {
   }
 
   .nav-links a {
+    font-size: 1.1rem;
     text-align: right;
-    font-size: 1rem;
-    padding: 0.4rem 0;
+    width: 100%;
+  }
+
+  #home {
+    border-radius: 0 0 20px 20px;
+    padding: 2rem 1rem;
+    min-height: 70vh;
+  }
+
+  #home h1 {
+    font-size: 1.9rem;
   }
 }
