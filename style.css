@@ -235,6 +235,40 @@ header {
   font-size: 1.2rem;
 }
 
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-link:hover .project-card {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+}
+
+.project-detail-img {
+  width: 100%;
+  max-width: 700px;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  display: block;
+}
+
+.project-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
 /* ===== Buttons ===== */
 .btn {
   display: inline-block;
