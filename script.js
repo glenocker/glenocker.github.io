@@ -56,3 +56,20 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
+
+// ===== Lightbox for Project Pages =====
+const galleryImages = document.querySelectorAll('.project-gallery img');
+const lightbox = document.createElement('div');
+lightbox.classList.add('lightbox');
+document.body.appendChild(lightbox);
+
+galleryImages.forEach(img => {
+  img.addEventListener('click', () => {
+    lightbox.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+    lightbox.classList.add('visible');
+  });
+});
+
+lightbox.addEventListener('click', () => {
+  lightbox.classList.remove('visible');
+});
