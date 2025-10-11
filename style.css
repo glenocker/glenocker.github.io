@@ -89,7 +89,11 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Hero (Home) Section ===== */
+/* ===== Home Section (Circular Headshot, Clean Layout) ===== */
+.home {
+  background: none; /* removes gradient background */
+}
+
 .home-container {
   display: flex;
   align-items: center;
@@ -122,7 +126,7 @@ header {
   opacity: 0.9;
 }
 
-/* Mobile layout */
+/* Mobile Layout */
 @media (max-width: 768px) {
   .home-container {
     flex-direction: column;
