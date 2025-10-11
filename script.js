@@ -27,22 +27,29 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// ===== Scroll Reveal Animation (one-time trigger, staggered) =====
+// ===== Scroll Reveal Animation (one-time trigger, staggered for groups) =====
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
-  let delay = 0;
 
-  reveals.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
+  reveals.forEach(parent => {
+    const elementTop = parent.getBoundingClientRect().top;
 
     // Only trigger if visible and not already shown
-    if (elementTop < windowHeight - 100 && !el.classList.contains('visible')) {
-      // Apply staggered delay for each element entering view
-      el.style.transitionDelay = `${delay}s`;
-      el.classList.add('visible');
-      delay += 0.1; // 0.1 s gap between items
+    if (elementTop < windowHeight - 100 && !parent.classList.contains('visible')) {
+      parent.classList.add('visible');
+
+      // If this element contains multiple revealable children (like project cards)
+      const children = parent.querySelectorAll('.project-card.reveal');
+      if (children.length > 0) {
+        let delay = 0;
+        children.forEach(child => {
+          child.style.transitionDelay = `${delay}s`;
+          child.classList.add('visible');
+          delay += 0.1; // 0.1s stagger
+        });
+      }
     }
   });
 }
