@@ -89,9 +89,10 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Home Section (Circular Headshot, Clean Layout) ===== */
+/* ===== Home Section (Circular Headshot + Animation) ===== */
 .home {
   background: none; /* removes gradient background */
+  padding-top: 3rem; /* reduce top space */
 }
 
 .home-container {
@@ -101,7 +102,9 @@ header {
   gap: 2rem;
   flex-wrap: wrap;
   text-align: left;
-  min-height: 80vh;
+  min-height: 70vh; /* slightly shorter */
+  animation: fadeIn 1.2s ease-in forwards;
+  opacity: 0; /* start transparent, fade in */
 }
 
 .headshot {
@@ -109,11 +112,19 @@ header {
   height: 220px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 1.4s ease forwards;
+  animation-delay: 0.2s;
 }
 
 .intro-text {
   max-width: 500px;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeUp 1.4s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .intro-text h1 {
@@ -132,12 +143,29 @@ header {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
   }
 
   .headshot {
     width: 180px;
     height: 180px;
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
