@@ -27,18 +27,19 @@ menuToggle.addEventListener("click", () => {
   navLinks.classList.toggle("active");
 });
 
-// ===== Scroll Reveal Animation =====
+// ===== Scroll Reveal Animation (one-time trigger) =====
 const reveals = document.querySelectorAll('.reveal');
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
   reveals.forEach(el => {
     const elementTop = el.getBoundingClientRect().top;
-    if (elementTop < windowHeight - 100) {
+    if (elementTop < windowHeight - 100 && !el.classList.contains('visible')) {
       el.classList.add('visible');
     }
   });
 }
 
+// Run on scroll and on initial load
 window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
