@@ -374,26 +374,41 @@ footer {
   cursor: zoom-out;
 }
 
-/* ===== Contact Section Social Links ===== */
-.contact-buttons {
-  margin-bottom: 1.5rem;
-}
-
-.social-links {
+/* ===== Contact Section (Hyperlinks + SVG Icons) ===== */
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
 }
 
-.social-links a {
-  font-size: 2rem;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: color 0.2s ease, transform 0.2s ease;
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.1rem;
 }
 
-.social-links a:hover {
+.contact-list a {
   color: var(--accent);
-  transform: translateY(-3px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+  color: var(--text-color);
+}
+
+.icon {
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  color: var(--text-color);
+  opacity: 0.9;
+  transition: color 0.2s ease;
 }
