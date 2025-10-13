@@ -1,6 +1,6 @@
 /* ===== Unified Color + Design System ===== */
 :root {
-  --accent: #007bff;
+  --accent: #004aad;
   --bg-color: #f9f9f9;
   --text-color: #222;
   --panel-bg: rgba(255,255,255,0.95);
@@ -295,7 +295,7 @@ header {
 }
 
 .btn:hover {
-  background-color: #0065d1;
+  background-color: #003b88;
   transform: translateY(-2px);
 }
 
