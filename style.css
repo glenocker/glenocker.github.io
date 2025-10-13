@@ -373,3 +373,27 @@ footer {
   object-fit: contain;
   cursor: zoom-out;
 }
+
+/* ===== Contact Section Social Links ===== */
+.contact-buttons {
+  margin-bottom: 1.5rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: var(--accent);
+  transform: translateY(-3px);
+}
