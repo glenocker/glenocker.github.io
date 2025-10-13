@@ -260,11 +260,19 @@ header {
   display: block;
 }
 
+/* ===== Project Gallery (2 images wide) ===== */
 .project-gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* For smaller screens, make it 1 image wide */
+@media (max-width: 768px) {
+  .project-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .project-gallery img {
