@@ -377,10 +377,10 @@ header {
 }
 
 .instagram-media {
-  margin-top: 1rem !important;
-  margin-bottom: 1rem !important;
+  margin: 1rem auto !important;
   max-width: 100% !important;
   border-radius: 8px !important;
+  display: block;
 }
 
 /* ===== Buttons ===== */
