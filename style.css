@@ -156,26 +156,37 @@ header {
 @media (max-width: 768px) {
   .dropdown-content {
     position: static;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
+    background-color: var(--card-bg); /* restores solid background */
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     overflow: hidden;
-    max-height: 0;           /* hide by default */
+    max-height: 0;           /* hidden by default */
     opacity: 0;
     transition: max-height 0.3s ease, opacity 0.3s ease;
   }
 
   .dropdown.open .dropdown-content {
-    max-height: 500px;       /* adjust if you have many links */
+    max-height: 600px;       /* allow all items to fit */
     opacity: 1;
   }
 
   .dropdown-content a {
-    padding-left: 1.5rem;
     display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    background: transparent;
+    text-decoration: none;
+    white-space: normal;
+    word-wrap: break-word;
   }
 
-  /* keep the arrow centered vertically */
+  .dropdown-content a:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+
   .dropbtn {
     display: flex;
     align-items: center;
