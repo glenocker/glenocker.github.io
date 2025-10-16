@@ -80,6 +80,11 @@ header {
   color: var(--accent);
 }
 
+.nav-links li {
+  list-style: none;
+  border: none;
+}
+
 .menu-toggle {
   display: none;
   background: none;
@@ -145,6 +150,16 @@ header {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+}
+
+/* ===== Dropdown Arrow Animation ===== */
+.arrow {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.dropdown.open .arrow {
+  transform: rotate(180deg);
 }
 
 /* Mobile tweaks */
