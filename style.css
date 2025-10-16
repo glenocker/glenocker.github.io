@@ -351,6 +351,13 @@ header {
   }
 }
 
+.instagram-media {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  max-width: 100% !important;
+  border-radius: 8px !important;
+}
+
 /* ===== Buttons ===== */
 .btn {
   display: inline-block;
