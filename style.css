@@ -281,10 +281,10 @@ header {
   box-shadow: var(--shadow);
 }
 
-/* ===== Hobbies Section ===== */
+/* ===== Hobbies Section (Stacked Layout) ===== */
 .hobby-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
