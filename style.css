@@ -154,46 +154,40 @@ header {
 
 /* ===== Mobile Dropdown Behavior ===== */
 @media (max-width: 768px) {
-  .dropdown-content {
-    position: static;
-    background-color: var(--card-bg); /* restores solid background */
-    border-radius: 8px;
-    margin-top: 0.5rem;
-    padding: 0.25rem 0;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    overflow: hidden;
-    max-height: 0;           /* hidden by default */
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-  }
-
-  .dropdown.open .dropdown-content {
-    max-height: 600px;       /* allow all items to fit */
-    opacity: 1;
-  }
-
-  .dropdown-content a {
-    display: block;
-    padding: 0.75rem 1.5rem;
-    color: var(--text-color);
-    background: transparent;
-    text-decoration: none;
-    white-space: normal;
-    word-wrap: break-word;
-  }
-
-  .dropdown-content a:hover {
-    background-color: var(--accent);
-    color: #fff;
-  }
-
   .dropbtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding: 0.8rem 1.25rem; /* match other links */
+  }
+
+  .dropdown-content {
+    position: static;                       /* stack inside panel */
+    background-color: var(--card-bg);       /* readable card on panel */
+    border-radius: 8px;
+    margin: 0.25rem 0.75rem;                /* inset card look */
+    padding: 0.25rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    overflow: hidden;
+    max-height: 0;                          /* collapsed by default */
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .dropdown.open .dropdown-content {
+    max-height: 600px;                      /* expand */
+    opacity: 1;
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 0.75rem 1rem;                  /* inside the card */
+    white-space: normal;
+    word-wrap: break-word;
   }
 }
+
 
 /* ===== Home Section (Circular Headshot + Animation) ===== */
 .home {
@@ -523,20 +517,26 @@ footer {
     display: block;
   }
 
-  .nav-links {
-  display: none;
-  flex-direction: column;
-  align-items: center;
-  background-color: var(--background);
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 100%;
-  transition: max-height 0.3s ease;
-  overflow-y: auto; /* allow scrolling if needed */
-  overflow-x: visible; /* prevent horizontal clipping */
-  max-height: 80vh; /* keeps menu from covering the whole screen */
-}
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;                 /* let items fill width */
+    background-color: var(--panel-bg);    /* FIX: real variable, opaque panel */
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 100%;
+    left: 0;                              /* anchor to left so it’s centered */
+    width: 100%;
+    z-index: 1500;                        /* above content */
+    border-bottom: 1px solid var(--card-border);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    transition: max-height 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;                   /* no horizontal spill */
+    max-height: 80vh;
+    padding: 0.5rem 0;                    /* breathing room */
+  }
+
 
   .nav-links.active {
     display: flex;
@@ -546,6 +546,9 @@ footer {
     font-size: 1.1rem;
     text-align: right;
     width: 100%;
+    padding: 0.8rem 1.25rem;              /* bigger tap target */
+    white-space: normal;                   /* wrap long text */
+    word-wrap: break-word;
   }
 
   #home {
