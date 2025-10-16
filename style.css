@@ -325,9 +325,10 @@ header {
   transition: opacity 1s ease;
 }
 
+/* ===== Video Gallery (2-wide layout) ===== */
 .video-gallery {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   margin-top: 1rem;
 }
@@ -338,6 +339,13 @@ header {
   border: none;
   border-radius: 8px;
   box-shadow: var(--shadow);
+}
+
+/* Make it single-column on smaller screens */
+@media (max-width: 768px) {
+  .video-gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .photo-grid {
