@@ -89,7 +89,7 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Dropdown Menu (Animated) ===== */
+/* ===== Dropdown Menu (Click + Hover compatible) ===== */
 .dropdown {
   position: relative;
 }
@@ -101,7 +101,7 @@ header {
 
 .dropdown-content {
   position: absolute;
-  top: 100%; /* attaches right below the button */
+  top: 100%;
   left: 0;
   background-color: var(--card-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -133,15 +133,21 @@ header {
   color: white;
 }
 
-/* Hover state (fade + slide in) */
-.dropdown:hover .dropdown-content,
-.dropdown-content:hover {
+/* Show dropdown when .show class is added via JS */
+.dropdown-content.show {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
 }
 
-/* ===== Mobile-friendly tweaks ===== */
+/* Keep hover functionality as fallback */
+.dropdown:hover .dropdown-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Mobile tweaks */
 @media (max-width: 768px) {
   .dropdown-content {
     position: static;
@@ -158,6 +164,7 @@ header {
     padding-left: 1.5rem;
   }
 }
+
 
 /* ===== Home Section (Circular Headshot + Animation) ===== */
 .home {
