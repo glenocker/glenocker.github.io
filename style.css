@@ -152,21 +152,35 @@ header {
   transform: rotate(180deg);
 }
 
-/* Mobile tweaks */
+/* ===== Mobile Dropdown Behavior ===== */
 @media (max-width: 768px) {
   .dropdown-content {
     position: static;
-    box-shadow: none;
     background: transparent;
+    box-shadow: none;
     border-radius: 0;
+    overflow: hidden;
+    max-height: 0;           /* hide by default */
+    opacity: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+  }
+
+  .dropdown.open .dropdown-content {
+    max-height: 500px;       /* adjust if you have many links */
     opacity: 1;
-    transform: none;
-    pointer-events: auto;
-    transition: none;
   }
 
   .dropdown-content a {
     padding-left: 1.5rem;
+    display: block;
+  }
+
+  /* keep the arrow centered vertically */
+  .dropbtn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 }
 
