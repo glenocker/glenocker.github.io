@@ -94,6 +94,40 @@ header {
   color: var(--text-color);
 }
 
+/* ===== Mobile Nav ===== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;             /* start at top of screen */
+    left: 0;
+    width: 100%;
+    height: 100vh;      /* fill full screen height */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: var(--bg-color);
+    padding-top: 5rem;  /* leave space for header bar */
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    overflow-y: auto;   /* scroll if menu is tall */
+  }
+
+  .nav-links.active {
+    transform: translateY(0); /* slides into view */
+  }
+
+  .nav-links a,
+  .nav-links .dropbtn {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: left;
+  }
+}
+
 /* ===== Dropdown Menu (Click + Hover compatible) ===== */
 .dropdown {
   position: relative;
@@ -536,7 +570,7 @@ footer {
     display: block;
   }
 
-  .nav-links {
+    .nav-links {
     display: none;
     flex-direction: column;
     align-items: stretch;                 /* let items fill width */
@@ -552,9 +586,10 @@ footer {
     transition: max-height 0.3s ease;
     overflow-y: auto;
     overflow-x: hidden;                   /* no horizontal spill */
-    max-height: calc(100vh - 70px);       /* Adjusted to prevent cutoff; assumes ~70px header height */
+    max-height: 80vh;
     padding: 0.5rem 0;                    /* breathing room */
   }
+
 
   .nav-links.active {
     display: flex;
