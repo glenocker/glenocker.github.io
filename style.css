@@ -89,26 +89,32 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Dropdown Menu ===== */
+/* ===== Dropdown Menu (Animated) ===== */
 .dropdown {
   position: relative;
 }
 
 .dropbtn {
   cursor: pointer;
+  display: inline-block;
 }
 
 .dropdown-content {
-  display: none;
   position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--card-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   min-width: 200px;
-  z-index: 1000;
-  top: 100%;
-  left: 0;
   overflow: hidden;
+  z-index: 1000;
+
+  /* start hidden */
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
 .dropdown-content li {
@@ -120,7 +126,7 @@ header {
   padding: 0.75rem 1rem;
   color: var(--text-color);
   text-decoration: none;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-content a:hover {
@@ -128,17 +134,24 @@ header {
   color: white;
 }
 
+/* Hover state (fade + slide in) */
 .dropdown:hover .dropdown-content {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
 
-/* Optional: adjust for mobile view */
+/* ===== Mobile-friendly tweaks ===== */
 @media (max-width: 768px) {
   .dropdown-content {
     position: static;
     box-shadow: none;
     background: transparent;
     border-radius: 0;
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
+    transition: none;
   }
 
   .dropdown-content a {
