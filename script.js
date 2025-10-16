@@ -74,24 +74,21 @@ lightbox.addEventListener('click', () => {
   lightbox.classList.remove('visible');
 });
 
-// ===== Dropdown Menu Toggle (Click-to-open with Arrow Rotation) =====
+// ===== Dropdown Menu Toggle (Click-to-open + Hover fix + Arrow Rotation) =====
 document.addEventListener('DOMContentLoaded', () => {
   const dropdown = document.querySelector('.dropdown');
   const button = dropdown.querySelector('.dropbtn');
   const menu = dropdown.querySelector('.dropdown-content');
-  const arrow = button.querySelector('.arrow');
 
-  // Toggle dropdown on click
+  // Toggle dropdown on click (for touch + mobile)
   button.addEventListener('click', (e) => {
     e.preventDefault();
-    const isOpen = menu.classList.toggle('show');
-    dropdown.classList.toggle('open', isOpen);
+    dropdown.classList.toggle('open');
   });
 
-  // Close dropdown when clicking outside
+  // Close when clicking elsewhere
   document.addEventListener('click', (e) => {
     if (!dropdown.contains(e.target)) {
-      menu.classList.remove('show');
       dropdown.classList.remove('open');
     }
   });
