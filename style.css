@@ -101,7 +101,7 @@ header {
 
 .dropdown-content {
   position: absolute;
-  top: 100%;
+  top: 100%; /* attaches right below the button */
   left: 0;
   background-color: var(--card-bg);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -109,12 +109,11 @@ header {
   min-width: 200px;
   overflow: hidden;
   z-index: 1000;
-
-  /* start hidden */
   opacity: 0;
   transform: translateY(-10px);
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
+  transition-delay: 0.15s; /* slight delay before disappearing */
 }
 
 .dropdown-content li {
@@ -135,7 +134,8 @@ header {
 }
 
 /* Hover state (fade + slide in) */
-.dropdown:hover .dropdown-content {
+.dropdown:hover .dropdown-content,
+.dropdown-content:hover {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
