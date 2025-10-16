@@ -152,42 +152,55 @@ header {
   transform: rotate(180deg);
 }
 
-/* ===== Mobile Dropdown Behavior ===== */
+/* ===== Mobile Dropdown Final Fix ===== */
 @media (max-width: 768px) {
+  .dropdown {
+    width: 100%;
+  }
+
+  .dropdown-content {
+    position: relative;               /* stay inside mobile menu */
+    background-color: var(--card-bg); /* use your light/dark card color */
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    padding: 0.25rem 0;
+    box-shadow: none;
+    overflow: hidden;
+    max-height: 0;                    /* closed by default */
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .dropdown.open .dropdown-content {
+    max-height: 600px;                /* enough room for links */
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .dropdown-content a {
+    display: block;
+    padding: 0.75rem 1.5rem;
+    color: var(--text-color);
+    background: transparent;
+    text-decoration: none;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .dropdown-content a:hover {
+    background-color: var(--accent);
+    color: white;
+  }
+
   .dropbtn {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    padding: 0.8rem 1.25rem; /* match other links */
-  }
-
-  .dropdown-content {
-    position: static;                       /* stack inside panel */
-    background-color: var(--card-bg);       /* readable card on panel */
-    border-radius: 8px;
-    margin: 0.25rem 0.75rem;                /* inset card look */
-    padding: 0.25rem 0;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
-    overflow: hidden;
-    max-height: 0;                          /* collapsed by default */
-    opacity: 0;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-  }
-
-  .dropdown.open .dropdown-content {
-    max-height: 600px;                      /* expand */
-    opacity: 1;
-  }
-
-  .dropdown-content a {
-    display: block;
-    padding: 0.75rem 1rem;                  /* inside the card */
-    white-space: normal;
-    word-wrap: break-word;
   }
 }
-
 
 /* ===== Home Section (Circular Headshot + Animation) ===== */
 .home {
