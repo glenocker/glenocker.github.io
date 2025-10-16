@@ -89,6 +89,63 @@ header {
   color: var(--text-color);
 }
 
+/* ===== Dropdown Menu ===== */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--card-bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  min-width: 200px;
+  z-index: 1000;
+  top: 100%;
+  left: 0;
+  overflow: hidden;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Optional: adjust for mobile view */
+@media (max-width: 768px) {
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: transparent;
+    border-radius: 0;
+  }
+
+  .dropdown-content a {
+    padding-left: 1.5rem;
+  }
+}
+
 /* ===== Home Section (Circular Headshot + Animation) ===== */
 .home {
   background: none; /* removes gradient background */
