@@ -73,3 +73,23 @@ galleryImages.forEach(img => {
 lightbox.addEventListener('click', () => {
   lightbox.classList.remove('visible');
 });
+
+// ===== Dropdown Menu Toggle (Click-to-open) =====
+document.addEventListener('DOMContentLoaded', () => {
+  const dropdown = document.querySelector('.dropdown');
+  const button = dropdown.querySelector('.dropbtn');
+  const menu = dropdown.querySelector('.dropdown-content');
+
+  // Toggle dropdown on click
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    menu.classList.toggle('show');
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target)) {
+      menu.classList.remove('show');
+    }
+  });
+});
