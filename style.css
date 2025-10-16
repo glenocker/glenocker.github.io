@@ -311,6 +311,15 @@ header {
   margin-bottom: 1rem;
 }
 
+/* ===== Hobbies Divider ===== */
+.hobby-divider {
+  border: none;
+  border-top: 2px solid var(--accent);
+  width: 60%;
+  margin: 1rem auto 1rem auto;
+  opacity: 0.5;
+}
+
 .video-gallery {
   display: grid;
   grid-template-columns: 1fr;
