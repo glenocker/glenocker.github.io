@@ -94,37 +94,64 @@ header {
   color: var(--text-color);
 }
 
-/* ===== Mobile Nav ===== */
+/* ===== Mobile Menu (Fixed) ===== */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: flex;
+    display: block;
   }
 
   .nav-links {
-    position: fixed;
-    top: 0;             /* start at top of screen */
-    left: 0;
-    width: 100%;
-    height: 100vh;      /* fill full screen height */
+    display: none;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    background-color: var(--bg-color);
-    padding-top: 5rem;  /* leave space for header bar */
-    transform: translateY(-100%);
-    transition: transform 0.3s ease;
-    overflow-y: auto;   /* scroll if menu is tall */
+    align-items: stretch;
+    background-color: var(--panel-bg);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0; /* Use right: 0 instead of width: 100% */
+    width: auto; /* Let it fill naturally */
+    z-index: 1500;
+    border-bottom: 1px solid var(--card-border);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+    transition: max-height 0.3s ease;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 80vh;
+    padding: 0.5rem 0;
+    box-sizing: border-box; /* Important: include padding in width calculation */
   }
 
   .nav-links.active {
-    transform: translateY(0); /* slides into view */
+    display: flex;
   }
 
-  .nav-links a,
+  .nav-links a {
+    font-size: 1.1rem;
+    text-align: left; /* Changed from right to left for better readability */
+    display: block;
+    padding: 0.8rem 1.25rem;
+    white-space: normal;
+    word-wrap: break-word;
+    box-sizing: border-box; /* Include padding in width */
+    overflow-wrap: break-word; /* Better text wrapping support */
+    min-width: 0; /* Allows flex children to shrink below content size */
+  }
+
   .nav-links .dropbtn {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    text-align: left;
+    padding: 0.8rem 1.25rem;
+    box-sizing: border-box;
+    min-width: 0;
+  }
+
+  #home {
+    border-radius: 0 0 20px 20px;
+    padding: 2rem 1rem;
+    min-height: 70vh;
+  }
+
+  #home h1 {
+    font-size: 1.9rem;
   }
 }
 
@@ -562,57 +589,6 @@ footer {
   border-top: 1px solid var(--footer-border);
   margin-top: 3rem;
   opacity: 0.9;
-}
-
-/* ===== Mobile Menu ===== */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-    .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: stretch;                 /* let items fill width */
-    background-color: var(--panel-bg);    /* FIX: real variable, opaque panel */
-    backdrop-filter: blur(8px);
-    position: absolute;
-    top: 100%;
-    left: 0;                              /* anchor to left so it’s centered */
-    width: 100%;
-    z-index: 1500;                        /* above content */
-    border-bottom: 1px solid var(--card-border);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-    transition: max-height 0.3s ease;
-    overflow-y: auto;
-    overflow-x: hidden;                   /* no horizontal spill */
-    max-height: 80vh;
-    padding: 0.5rem 0;                    /* breathing room */
-  }
-
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links a {
-    font-size: 1.1rem;
-    text-align: right;
-    width: 100%;
-    padding: 0.8rem 1.25rem;              /* bigger tap target */
-    white-space: normal;                   /* wrap long text */
-    word-wrap: break-word;
-  }
-
-  #home {
-    border-radius: 0 0 20px 20px;
-    padding: 2rem 1rem;
-    min-height: 70vh;
-  }
-
-  #home h1 {
-    font-size: 1.9rem;
-  }
 }
 
 /* ===== Lightbox Image Viewer ===== */
