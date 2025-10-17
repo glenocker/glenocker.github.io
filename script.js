@@ -58,7 +58,7 @@ window.addEventListener('scroll', revealOnScroll);
 window.addEventListener('load', revealOnScroll);
 
 // ===== Lightbox for Project Pages =====
-const galleryImages = document.querySelectorAll('.project-gallery img');
+const galleryImages = document.querySelectorAll('img');
 const lightbox = document.createElement('div');
 lightbox.classList.add('lightbox');
 document.body.appendChild(lightbox);
@@ -72,6 +72,10 @@ galleryImages.forEach(img => {
 
 lightbox.addEventListener('click', () => {
   lightbox.classList.remove('visible');
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') lightbox.classList.remove('visible');
 });
 
 // ===== Dropdown Menu Toggle (Click-to-open + Hover fix + Arrow Rotation) =====
