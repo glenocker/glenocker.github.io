@@ -1,1 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#152e43"/><path d="M16 21H34V27H22V39H34V45H16ZM40 21H47V39H58V45H40Z" fill="#d6e7ff"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="GL monogram">
+  <rect width="64" height="64" rx="13" fill="#0b2346"/>
+  <path d="M31 21.5C28.5 19.5 25.7 18.5 22.5 18.5C14.1 18.5 10 24.8 10 32.2C10 39.8 14.4 45.5 22.5 45.5C26.5 45.5 29.5 44.4 32 42.7V32.5H24.5" fill="none" stroke="#ffffff" stroke-width="6.3" stroke-linecap="square" stroke-linejoin="round"/>
+  <path d="M42 19V45H55" fill="none" stroke="#ffffff" stroke-width="6.3" stroke-linecap="square" stroke-linejoin="miter"/>
+</svg>
