@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="BAJA SAE SUSPENSION: stylized engineering illustration"><defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#142335"/><stop offset="1" stop-color="#0b1724"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#405e73"/><stop offset=".55" stop-color="#a4bfc3"/><stop offset="1" stop-color="#2b435a"/></linearGradient>
+<linearGradient id="core" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#a3dbf6" stop-opacity=".76"/><stop offset="1" stop-color="#a3dbf6" stop-opacity=".16"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#000" flood-opacity=".35"/></filter>
+</defs><rect width="1000" height="600" fill="url(#bg)"/>
+<g stroke="#8facb4" stroke-opacity=".10" stroke-width="1"><path d="M 0 0 V 600" /><path d="M 40 0 V 600" /><path d="M 80 0 V 600" /><path d="M 120 0 V 600" /><path d="M 160 0 V 600" /><path d="M 200 0 V 600" /><path d="M 240 0 V 600" /><path d="M 280 0 V 600" /><path d="M 320 0 V 600" /><path d="M 360 0 V 600" /><path d="M 400 0 V 600" /><path d="M 440 0 V 600" /><path d="M 480 0 V 600" /><path d="M 520 0 V 600" /><path d="M 560 0 V 600" /><path d="M 600 0 V 600" /><path d="M 640 0 V 600" /><path d="M 680 0 V 600" /><path d="M 720 0 V 600" /><path d="M 760 0 V 600" /><path d="M 800 0 V 600" /><path d="M 840 0 V 600" /><path d="M 880 0 V 600" /><path d="M 920 0 V 600" /><path d="M 960 0 V 600" /><path d="M 1000 0 V 600" /><path d="M 0 0 H 600" /><path d="M 0 40 H 600" /><path d="M 0 80 H 600" /><path d="M 0 120 H 600" /><path d="M 0 160 H 600" /><path d="M 0 200 H 600" /><path d="M 0 240 H 600" /><path d="M 0 280 H 600" /><path d="M 0 320 H 600" /><path d="M 0 360 H 600" /><path d="M 0 400 H 600" /><path d="M 0 440 H 600" /><path d="M 0 480 H 600" /><path d="M 0 520 H 600" /><path d="M 0 560 H 600" /><path d="M 0 600 H 600" /></g>
+<path d="M 34 30 H 94 M 34 30 V 90 M 966 30 H 906 M 966 30 V 90 M 34 570 H 94 M 34 570 V 510 M 966 570 H 906 M 966 570 V 510" stroke="#a3dbf6" stroke-opacity=".54" fill="none" stroke-width="2" />
+<g font-family="Arial,Helvetica,sans-serif" fill="#bbccce" font-size="14" letter-spacing="3"><text x="54" y="67">BAJA SAE SUSPENSION</text><text x="946" y="554" text-anchor="end" font-size="12" opacity=".65">CONCEPT ILLUSTRATION</text></g>
+
+<g transform="translate(160,83)" stroke-linejoin="round" filter="url(#shadow)">
+<path d="M 116 85 L 450 85 L 483 173 L 110 173 Z" fill="none" stroke="#abc6cb" stroke-width="13"/>
+<path d="M 202 116 L 548 255 L 194 409 L 115 354 Z" fill="none" stroke="#6baaff" stroke-width="13"/>
+<path d="M 202 116 L 194 409" stroke="#dbece6" stroke-width="7"/>
+<path d="M 450 85 L 548 255 L 483 173" fill="none" stroke="#8bacb5" stroke-width="10"/>
+<path d="M 548 255 L 600 255" stroke="#ecf2ec" stroke-width="14"/><rect x="580" y="170" width="42" height="170" rx="8" fill="#293c55" stroke="#bed9d2" stroke-width="5"/>
+<circle cx="610" cy="255" r="102" stroke="#809daa" fill="none" stroke-width="29"/><circle cx="610" cy="255" r="57" stroke="#d2e6df" fill="#1d3348" stroke-width="6"/>
+<circle cx="548" cy="255" r="15" fill="#6baaff"/><circle cx="202" cy="116" r="12" fill="#edf4ff"/><circle cx="194" cy="409" r="12" fill="#edf4ff"/>
+</g><path d="M 139 160 V 450 M 107 160 H 171 M 107 450 H 171" stroke="#91dcc5" stroke-width="2"/><g font-family="monospace" font-size="18" fill="#bde8d9"><text x="78" y="125">2D / 3D KINEMATICS</text><text x="725" y="550">FRONT SUSPENSION</text></g>
+
+</svg>

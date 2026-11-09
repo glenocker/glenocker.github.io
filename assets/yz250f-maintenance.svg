@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc"><title id="title">Motocross motorcycle technical illustration</title><desc id="desc">Technical line illustration of a dirt bike with clutch and control switch callouts.</desc><defs><pattern id="grid" width="45" height="45" patternUnits="userSpaceOnUse"><path d="M45 0H0V45" stroke="#66808f" stroke-width="1" opacity=".12" fill="none"/></pattern><radialGradient id="bg"><stop stop-color="#254654"/><stop offset="1" stop-color="#142934"/></radialGradient><linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f0f4f3"/><stop offset="1" stop-color="#91b3b0"/></linearGradient></defs>
+<rect width="1200" height="720" fill="url(#bg)"/><rect width="1200" height="720" fill="url(#grid)"/>
+<g font-family="Arial,sans-serif"><text x="65" y="82" fill="#9cb9bb" font-size="22" letter-spacing="6">MECHANICAL FIELDWORK</text><text x="65" y="122" fill="#f3f7f6" font-size="36" font-weight="700">YZ250F / SERVICE &amp; DIAGNOSIS</text><text x="65" y="154" fill="#97b4b7" font-size="17" letter-spacing="3">CLUTCH · ENGINE OIL · CONTROL SWITCH</text></g>
+<g transform="translate(85 175)" stroke-linecap="round" stroke-linejoin="round">
+<g stroke="#cadbd8" fill="none" stroke-width="7"><circle cx="223" cy="370" r="121"/><circle cx="867" cy="370" r="121"/></g>
+<g stroke="#6d8d93" fill="none" stroke-width="2.2"><circle cx="223" cy="370" r="102"/><circle cx="867" cy="370" r="102"/><circle cx="223" cy="370" r="35"/><circle cx="867" cy="370" r="35"/></g>
+<g stroke="#bfd7f5" stroke-width="3" opacity=".7">
+<path d="M223 250v240M103 370h240M139 285l168 170M139 455l168-170M867 250v240M747 370h240M782 285l170 170M782 455l170-170"/>
+</g>
+<g fill="none" stroke="#e4f0ed" stroke-width="11"><path d="M270 360L420 220L602 358L433 386Z"/><path d="M433 386L360 252"/><path d="M610 345L785 232L867 370"/><path d="M682 184L777 221"/></g>
+<g stroke="#bfd7f5" stroke-width="14" fill="none"><path d="M751 188L865 368"/><path d="M769 187L880 366"/></g>
+<path d="M343 236L440 181L590 195L624 248L451 271L350 266Z" fill="url(#body)" stroke="#f0f8f7" stroke-width="4"/>
+<path d="M587 191L708 180L784 208L772 245L637 243Z" fill="#9dbbb8" stroke="#e6f1ee" stroke-width="4"/>
+<path d="M698 178L737 151L785 166" fill="none" stroke="#e1f2ed" stroke-width="9"/>
+<path d="M737 148L740 121L803 121" fill="none" stroke="#d9eeeb" stroke-width="7"/>
+<path d="M365 242L293 224L260 271" fill="none" stroke="#d0e2df" stroke-width="10"/>
+<path d="M595 280L675 298L613 321L536 319Z" fill="#d2e5e2" stroke="#e7f4f2" stroke-width="3"/>
+<path d="M394 300L551 292L580 378L444 399L383 355Z" fill="#192d39" stroke="#b5cac8" stroke-width="6"/>
+<circle cx="492" cy="350" r="44" fill="#4d6c76" stroke="#deefec" stroke-width="5"/><circle cx="492" cy="350" r="21" fill="#d3e5e2"/>
+<path d="M491 307L494 392M449 350H537" stroke="#a8c6c2" stroke-width="3" opacity=".7"/>
+<path d="M329 267L297 206L346 193" fill="none" stroke="#d6e8e4" stroke-width="8"/>
+<path d="M433 413L504 414L528 444" fill="none" stroke="#b9d5ce" stroke-width="7"/>
+</g>
+<g stroke="#72c3b6" fill="none" stroke-width="2"><path d="M570 533L607 575H1030"/><path d="M840 315L943 240H1088"/></g>
+<g font-family="Arial,sans-serif"><text x="751" y="564" fill="#e8f2ff" font-size="20" font-weight="700">CLUTCH ASSEMBLY</text><text x="752" y="588" fill="#a4c5ef" font-size="16">Spring replacement &amp; oil service</text><text x="945" y="219" fill="#e8f2ff" font-size="18" font-weight="700">CONTROL SWITCH</text><text x="946" y="243" fill="#a4c5ef" font-size="15">Electrical contact diagnosis</text><text x="65" y="665" fill="#87a7ad" letter-spacing="4" font-size="14">SCHEMATIC ILLUSTRATION · NOT A PHOTOGRAPH</text></g></svg>

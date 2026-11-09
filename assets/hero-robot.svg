@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="ROBOTIC SYSTEMS: stylized engineering illustration"><defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#142335"/><stop offset="1" stop-color="#0b1724"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#405e73"/><stop offset=".55" stop-color="#a4bfc3"/><stop offset="1" stop-color="#2b435a"/></linearGradient>
+<linearGradient id="core" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#6baaff" stop-opacity=".76"/><stop offset="1" stop-color="#6baaff" stop-opacity=".16"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#000" flood-opacity=".35"/></filter>
+</defs><rect width="1000" height="600" fill="url(#bg)"/>
+<g stroke="#8facb4" stroke-opacity=".10" stroke-width="1"><path d="M 0 0 V 600" /><path d="M 40 0 V 600" /><path d="M 80 0 V 600" /><path d="M 120 0 V 600" /><path d="M 160 0 V 600" /><path d="M 200 0 V 600" /><path d="M 240 0 V 600" /><path d="M 280 0 V 600" /><path d="M 320 0 V 600" /><path d="M 360 0 V 600" /><path d="M 400 0 V 600" /><path d="M 440 0 V 600" /><path d="M 480 0 V 600" /><path d="M 520 0 V 600" /><path d="M 560 0 V 600" /><path d="M 600 0 V 600" /><path d="M 640 0 V 600" /><path d="M 680 0 V 600" /><path d="M 720 0 V 600" /><path d="M 760 0 V 600" /><path d="M 800 0 V 600" /><path d="M 840 0 V 600" /><path d="M 880 0 V 600" /><path d="M 920 0 V 600" /><path d="M 960 0 V 600" /><path d="M 1000 0 V 600" /><path d="M 0 0 H 600" /><path d="M 0 40 H 600" /><path d="M 0 80 H 600" /><path d="M 0 120 H 600" /><path d="M 0 160 H 600" /><path d="M 0 200 H 600" /><path d="M 0 240 H 600" /><path d="M 0 280 H 600" /><path d="M 0 320 H 600" /><path d="M 0 360 H 600" /><path d="M 0 400 H 600" /><path d="M 0 440 H 600" /><path d="M 0 480 H 600" /><path d="M 0 520 H 600" /><path d="M 0 560 H 600" /><path d="M 0 600 H 600" /></g>
+<path d="M 34 30 H 94 M 34 30 V 90 M 966 30 H 906 M 966 30 V 90 M 34 570 H 94 M 34 570 V 510 M 966 570 H 906 M 966 570 V 510" stroke="#6baaff" stroke-opacity=".54" fill="none" stroke-width="2" />
+<g font-family="Arial,Helvetica,sans-serif" fill="#bbccce" font-size="14" letter-spacing="3"><text x="54" y="67">ROBOTIC SYSTEMS</text><text x="946" y="554" text-anchor="end" font-size="12" opacity=".65">CONCEPT ILLUSTRATION</text></g>
+
+<g transform="translate(138,47)" filter="url(#shadow)">
+<path d="M 90 401 L 352 317 L 640 391 L 378 477 Z" fill="#2c465c" stroke="#bfd9d5" stroke-width="3"/>
+<path d="M 90 401 L 90 446 L 378 533 L 378 477 Z" fill="#213748" stroke="#89a8b1" stroke-width="3"/>
+<path d="M 378 477 L 640 391 L 640 431 L 378 533 Z" fill="#132b3a" stroke="#89a8b1" stroke-width="3"/>
+<ellipse cx="348" cy="355" rx="130" ry="46" fill="#132b43" stroke="#91cbb9" stroke-width="6"/>
+<path d="M 283 352 L 297 278 L 360 252 L 436 292 L 430 355" fill="#466579" stroke="#b9d6cf" stroke-width="4"/>
+<ellipse cx="356" cy="289" rx="62" ry="29" fill="#172b3e" stroke="#abd5c9" stroke-width="5"/>
+<path d="M 316 275 L 252 190 Q 225 163 246 140 L 263 118 Q 286 98 306 125 L 383 216" fill="none" stroke="#274359" stroke-width="80" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M 316 275 L 252 190 Q 225 163 246 140 L 263 118 Q 286 98 306 125 L 383 216" fill="none" stroke="url(#metal)" stroke-width="54" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="258" cy="150" r="45" fill="#365568" stroke="#d7e6ff" stroke-width="6"/><circle cx="258" cy="150" r="23" fill="#6baaff" opacity=".8"/>
+<circle cx="355" cy="221" r="41" fill="#29485d" stroke="#d7e6ff" stroke-width="6"/><circle cx="355" cy="221" r="18" fill="#6baaff" opacity=".8"/>
+<path d="M 379 201 L 472 131" stroke="#8cacb4" stroke-width="62" stroke-linecap="round"/><path d="M 379 201 L 472 131" stroke="#e0efeb" stroke-width="33" stroke-linecap="round"/>
+<circle cx="478" cy="126" r="32" fill="#244054" stroke="#d2e4df" stroke-width="6"/>
+<path d="M 501 141 L 558 163" stroke="#9dbfc0" stroke-width="30" stroke-linecap="round"/>
+<path d="M 536 137 L 574 147 L 583 205 L 543 196 Z" fill="#233d50" stroke="#6baaff" stroke-width="5"/>
+</g><path d="M 746 188 H 849 V 120" stroke="#6baaff" stroke-width="2" fill="none"/><circle cx="746" cy="188" r="5" fill="#6baaff"/><g font-family="monospace" font-size="17" fill="#bde8d9"><text x="757" y="102">END EFFECTOR</text><text x="66" y="520">01 / DESIGN IN MOTION</text></g>
+
+</svg>

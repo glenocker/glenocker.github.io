@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="SOLAR OVEN: stylized engineering illustration"><defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#142335"/><stop offset="1" stop-color="#0b1724"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#405e73"/><stop offset=".55" stop-color="#a4bfc3"/><stop offset="1" stop-color="#2b435a"/></linearGradient>
+<linearGradient id="core" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#ffd6a7" stop-opacity=".76"/><stop offset="1" stop-color="#ffd6a7" stop-opacity=".16"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#000" flood-opacity=".35"/></filter>
+</defs><rect width="1000" height="600" fill="url(#bg)"/>
+<g stroke="#8facb4" stroke-opacity=".10" stroke-width="1"><path d="M 0 0 V 600" /><path d="M 40 0 V 600" /><path d="M 80 0 V 600" /><path d="M 120 0 V 600" /><path d="M 160 0 V 600" /><path d="M 200 0 V 600" /><path d="M 240 0 V 600" /><path d="M 280 0 V 600" /><path d="M 320 0 V 600" /><path d="M 360 0 V 600" /><path d="M 400 0 V 600" /><path d="M 440 0 V 600" /><path d="M 480 0 V 600" /><path d="M 520 0 V 600" /><path d="M 560 0 V 600" /><path d="M 600 0 V 600" /><path d="M 640 0 V 600" /><path d="M 680 0 V 600" /><path d="M 720 0 V 600" /><path d="M 760 0 V 600" /><path d="M 800 0 V 600" /><path d="M 840 0 V 600" /><path d="M 880 0 V 600" /><path d="M 920 0 V 600" /><path d="M 960 0 V 600" /><path d="M 1000 0 V 600" /><path d="M 0 0 H 600" /><path d="M 0 40 H 600" /><path d="M 0 80 H 600" /><path d="M 0 120 H 600" /><path d="M 0 160 H 600" /><path d="M 0 200 H 600" /><path d="M 0 240 H 600" /><path d="M 0 280 H 600" /><path d="M 0 320 H 600" /><path d="M 0 360 H 600" /><path d="M 0 400 H 600" /><path d="M 0 440 H 600" /><path d="M 0 480 H 600" /><path d="M 0 520 H 600" /><path d="M 0 560 H 600" /><path d="M 0 600 H 600" /></g>
+<path d="M 34 30 H 94 M 34 30 V 90 M 966 30 H 906 M 966 30 V 90 M 34 570 H 94 M 34 570 V 510 M 966 570 H 906 M 966 570 V 510" stroke="#ffd6a7" stroke-opacity=".54" fill="none" stroke-width="2" />
+<g font-family="Arial,Helvetica,sans-serif" fill="#bbccce" font-size="14" letter-spacing="3"><text x="54" y="67">SOLAR OVEN</text><text x="946" y="554" text-anchor="end" font-size="12" opacity=".65">CONCEPT ILLUSTRATION</text></g>
+
+<g transform="translate(165,140)" filter="url(#shadow)">
+<path d="M 90 220 L 360 125 L 594 210 L 321 306 Z" fill="#364b5d" stroke="#b7d0d0" stroke-width="4"/>
+<path d="M 90 220 L 90 366 L 321 453 L 321 306 Z" fill="#334d60" stroke="#a4c4c6" stroke-width="4"/>
+<path d="M 321 306 L 594 210 L 594 347 L 321 453 Z" fill="#1e3549" stroke="#8baeba" stroke-width="4"/>
+<path d="M 90 210 L 170 -25 L 417 -88 L 357 130 Z" fill="#718e98" stroke="#e5f5e4" stroke-width="7"/>
+<path d="M 116 172 L 187 -9 L 390 -59 L 345 119 Z" fill="#dbeedb" opacity=".88"/>
+<path d="M 90 220 L 360 125 L 594 210 L 321 306 Z" fill="#0d2632" stroke="#b8c9cd" stroke-width="4"/>
+<path d="M 165 219 L 356 158 L 510 207 L 321 276 Z" fill="#8bc7bb" opacity=".4"/><path d="M 210 219 L 360 173" stroke="#d7f1ce" stroke-width="4"/>
+</g><g stroke="#ffcb83" stroke-width="5" stroke-linecap="round" opacity=".95"><path d="M 730 96 l42 35 M 785 160 l54 13 M 674 73 l16 -43"/></g><circle cx="743" cy="69" r="36" fill="#ffcb83" opacity=".91"/>
+<g fill="#bde8d9" font-family="monospace"><text x="724" y="395" font-size="45" fill="#fff">165°C</text><text x="725" y="423" font-size="16">MEASURED INTERNAL TEMP</text></g>
+
+</svg>

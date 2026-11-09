@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" role="img" aria-label="DUAL-MOTOR BUFFER: stylized engineering illustration"><defs>
+<linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#142335"/><stop offset="1" stop-color="#0b1724"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#405e73"/><stop offset=".55" stop-color="#a4bfc3"/><stop offset="1" stop-color="#2b435a"/></linearGradient>
+<linearGradient id="core" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#6baaff" stop-opacity=".76"/><stop offset="1" stop-color="#6baaff" stop-opacity=".16"/></linearGradient>
+<filter id="shadow"><feDropShadow dx="0" dy="16" stdDeviation="17" flood-color="#000" flood-opacity=".35"/></filter>
+</defs><rect width="1000" height="600" fill="url(#bg)"/>
+<g stroke="#8facb4" stroke-opacity=".10" stroke-width="1"><path d="M 0 0 V 600" /><path d="M 40 0 V 600" /><path d="M 80 0 V 600" /><path d="M 120 0 V 600" /><path d="M 160 0 V 600" /><path d="M 200 0 V 600" /><path d="M 240 0 V 600" /><path d="M 280 0 V 600" /><path d="M 320 0 V 600" /><path d="M 360 0 V 600" /><path d="M 400 0 V 600" /><path d="M 440 0 V 600" /><path d="M 480 0 V 600" /><path d="M 520 0 V 600" /><path d="M 560 0 V 600" /><path d="M 600 0 V 600" /><path d="M 640 0 V 600" /><path d="M 680 0 V 600" /><path d="M 720 0 V 600" /><path d="M 760 0 V 600" /><path d="M 800 0 V 600" /><path d="M 840 0 V 600" /><path d="M 880 0 V 600" /><path d="M 920 0 V 600" /><path d="M 960 0 V 600" /><path d="M 1000 0 V 600" /><path d="M 0 0 H 600" /><path d="M 0 40 H 600" /><path d="M 0 80 H 600" /><path d="M 0 120 H 600" /><path d="M 0 160 H 600" /><path d="M 0 200 H 600" /><path d="M 0 240 H 600" /><path d="M 0 280 H 600" /><path d="M 0 320 H 600" /><path d="M 0 360 H 600" /><path d="M 0 400 H 600" /><path d="M 0 440 H 600" /><path d="M 0 480 H 600" /><path d="M 0 520 H 600" /><path d="M 0 560 H 600" /><path d="M 0 600 H 600" /></g>
+<path d="M 34 30 H 94 M 34 30 V 90 M 966 30 H 906 M 966 30 V 90 M 34 570 H 94 M 34 570 V 510 M 966 570 H 906 M 966 570 V 510" stroke="#6baaff" stroke-opacity=".54" fill="none" stroke-width="2" />
+<g font-family="Arial,Helvetica,sans-serif" fill="#bbccce" font-size="14" letter-spacing="3"><text x="54" y="67">DUAL-MOTOR BUFFER</text><text x="946" y="554" text-anchor="end" font-size="12" opacity=".65">CONCEPT ILLUSTRATION</text></g>
+
+<g filter="url(#shadow)" transform="translate(90,52)">
+ <path d="M 132 213 L 330 104 L 660 179 L 460 300 Z" fill="#3b5b70" stroke="#b4d1d0" stroke-width="2"/>
+ <path d="M 132 213 L 132 293 L 460 386 L 460 300 Z" fill="#29445a" stroke="#88b1b9" stroke-width="2"/>
+ <path d="M 460 300 L 660 179 L 660 259 L 460 386 Z" fill="#203a52" stroke="#88b1b9" stroke-width="2"/>
+ <g transform="translate(273,242) rotate(-17)"><rect x="-58" y="-92" width="410" height="176" rx="84" fill="url(#metal)" stroke="#c5dad9" stroke-width="3"/>
+ <rect x="-68" y="-92" width="91" height="176" rx="30" fill="#263f56" stroke="#92d8c4" stroke-width="5"/><ellipse cx="23" cy="-4" rx="25" ry="86" fill="#7d9eac" stroke="#bad4d6" stroke-width="3"/>
+ <rect x="78" y="-90" width="35" height="171" fill="#1e3449" stroke="#a1b7bc" stroke-width="3"/><rect x="260" y="-90" width="35" height="171" fill="#1e3449" stroke="#a1b7bc" stroke-width="3"/>
+ <ellipse cx="352" cy="-4" rx="75" ry="88" fill="#254356" stroke="#6baaff" stroke-width="5"/>
+ <ellipse cx="352" cy="-4" rx="43" ry="53" fill="#162738" stroke="#b1d2d3" stroke-width="3"/><ellipse cx="352" cy="-4" rx="18" ry="24" fill="#6baaff" opacity=".9"/>
+ </g>
+</g><g stroke="#6baaff" stroke-width="2" fill="none" opacity=".8"><path d="M 748 147 H 856 V 92"/><path d="M 266 366 H 137 V 432"/><circle cx="748" cy="147" r="4" fill="#6baaff"/><circle cx="266" cy="366" r="4" fill="#6baaff"/></g>
+<g fill="#bde8d9" font-family="monospace" font-size="17"><text x="718" y="82">BEARING SUPPORT</text><text x="95" y="458">DUAL MOTOR DRIVE</text></g>
+
+</svg>

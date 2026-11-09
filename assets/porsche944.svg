@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc"><title id="title">1983 Porsche 944 technical illustration</title><desc id="desc">Line art silhouette of a Porsche 944 side profile for a restoration planning case study.</desc><defs><pattern id="grid" width="50" height="50" patternUnits="userSpaceOnUse"><path d="M50 0H0V50" stroke="#627f90" stroke-width="1" opacity=".13" fill="none"/></pattern><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1b3342"/><stop offset="1" stop-color="#0d1f2e"/></linearGradient></defs>
+<rect width="1200" height="720" fill="url(#bg)"/><rect width="1200" height="720" fill="url(#grid)"/>
+<g font-family="Arial,sans-serif"><text x="65" y="82" fill="#9cb9bb" font-size="22" letter-spacing="6">AUTOMOTIVE PROJECT</text><text x="65" y="122" fill="#f3f7f6" font-size="36" font-weight="700">1983 PORSCHE 944</text><text x="65" y="154" fill="#97b4b7" font-size="17" letter-spacing="3">ASSESSMENT / RESTORATION PLANNING</text></g>
+<g transform="translate(80 222)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+<path d="M40 260L84 251L131 233L260 197L356 111Q380 91 441 90L647 90Q684 92 725 123L866 210L1003 225Q1050 229 1071 253L1074 310L1027 329H1020Q1020 255 953 255Q881 255 881 330H300Q298 253 227 253Q155 253 155 330H65L45 308Z" fill="#243f50" stroke="#d9e9e8" stroke-width="6"/>
+<path d="M365 113L445 108L643 108Q670 109 698 134L791 211H285Z" fill="#6d8d99" fill-opacity=".28" stroke="#b0ccd0" stroke-width="4"/>
+<path d="M445 108L449 212M698 135L791 211" stroke="#9bbdc2" stroke-width="4"/>
+<path d="M285 210L785 210M797 211L869 211M286 233L852 233M145 247H60" stroke="#85a5ae" stroke-width="3" opacity=".9"/>
+<path d="M49 259L111 260L108 278H43M1023 251L1071 253" stroke="#bed9d8" stroke-width="5"/>
+<path d="M845 248L857 287M350 250L340 295" stroke="#a4c2c2" stroke-width="3"/>
+<rect x="467" y="224" width="60" height="8" rx="4" fill="#bedbd6" stroke="none"/>
+<path d="M245 219L318 209M1010 226L1010 250" stroke="#ccdfdf" stroke-width="4"/>
+<circle cx="226" cy="329" r="84" fill="#1b3140" stroke="#dce9fa" stroke-width="7"/><circle cx="226" cy="329" r="52" stroke="#8aa8af" stroke-width="9"/><circle cx="226" cy="329" r="23" fill="#c7dffb" stroke="#e3edfa" stroke-width="6"/>
+<circle cx="953" cy="329" r="84" fill="#1b3140" stroke="#dce9fa" stroke-width="7"/><circle cx="953" cy="329" r="52" stroke="#8aa8af" stroke-width="9"/><circle cx="953" cy="329" r="23" fill="#c7dffb" stroke="#e3edfa" stroke-width="6"/>
+<path d="M226 277V381M174 329H278M953 277V381M901 329H1005" stroke="#77969c" stroke-width="2"/>
+<path d="M65 412H1055M67 412V432M1053 412V432" stroke="#7097a2" stroke-width="2" opacity=".8"/>
+</g>
+<g font-family="Arial,sans-serif"><text x="65" y="665" fill="#87a7ad" letter-spacing="4" font-size="14">SCHEMATIC ILLUSTRATION · NOT A PHOTOGRAPH</text><text x="992" y="665" fill="#87a7ad" letter-spacing="3" font-size="14">944 / 1983</text></g></svg>
