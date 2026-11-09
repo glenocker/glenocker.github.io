@@ -11,7 +11,7 @@ Responsive, static engineering portfolio. The color palette uses the same blue a
 ## Features
 
 - Responsive home page with project filters, education, experience and a dedicated resume preview section
-- Projects dropdown in the site header linking directly to each of the eight featured project case studies; includes `View all projects`
+- Projects dropdown in the site header linking directly to each of the eight featured project projects; includes `View all projects`
 - Detailed project pages organized by goal, constraints, approach/contributions, result/evidence and lessons or next validation
 - Original project CAD, photos and drawings from Baja SAE, solar oven, Kazvu Labs, Tacoma conversion, dirt bike maintenance and Porsche 944 work
 - Enlarged image galleries on supported pages
@@ -27,12 +27,12 @@ Responsive, static engineering portfolio. The color palette uses the same blue a
 
 ## Publishing note
 
-Before making a public version of the site, verify which Kazvu Labs images and design details are approved to share. Some case studies explicitly identify ongoing or conceptual work rather than implying completed tests or fabricated hardware.
+Before making a public version of the site, verify which Kazvu Labs images and design details are approved to share. Some projects explicitly identify ongoing or conceptual work rather than implying completed tests or fabricated hardware.
 
 ## Featured project order
 
 1. UR10e Motor Mount with M8 Connector
-2. Kazvu Robot Backing Plate
+2. Robot Backing Plate
 3. Dual-Motor Buffer End Effector
 4. Baja SAE Suspension Development
 5. Tacoma Camper Storage System

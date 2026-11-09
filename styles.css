@@ -67,7 +67,7 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 /* Balanced gallery rows for the solar oven CAD and build sequence */
 @media (min-width:951px){.solar-case-gallery .case-gallery-grid{grid-template-columns:repeat(6,minmax(0,1fr))}.solar-case-gallery .gallery-figure{grid-column:span 2}.solar-case-gallery .gallery-figure.media-full{grid-column:span 6}.solar-case-gallery .gallery-figure:nth-last-child(-n+2){grid-column:span 3}}
 
-/* Vehicle maintenance and restoration case studies */
+/* Vehicle maintenance and restoration projects */
 .vehicle-intro {padding:0 0 54px;margin-bottom:56px;border-bottom:1px solid var(--line)}
 .vehicle-intro h2{font-size:clamp(31px,3vw,45px);line-height:1.16;letter-spacing:-.05em;margin:14px 0 18px}
 .vehicle-intro h2 em{font-family:Georgia,serif;font-weight:400}
@@ -170,3 +170,8 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 /* Name-first hero presentation */
 .hero h1 em{font-family:inherit;font-weight:780;font-style:normal;white-space:normal;letter-spacing:inherit}
 @media (max-width: 690px){.hero h1{font-size:clamp(48px,11.8vw,76px);overflow-wrap:normal}}
+
+
+/* Hero layout when no headshot/feature image is shown */
+.hero-grid--no-art{grid-template-columns:minmax(0,1fr);gap:0}
+.hero-grid--no-art .hero-copy{max-width:860px}
