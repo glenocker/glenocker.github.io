@@ -177,3 +177,11 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{max-width:100%;disp
 .hero-grid--no-art .hero-copy{max-width:860px}
 
 .media-video{background:#eff3fa;overflow:hidden}.media-video video{display:block;width:100%;height:auto;background:#0b2346}.media-video figcaption{padding-top:14px}@media (max-width:690px){.media-video video{min-height:220px}}
+
+/* CAD images: show entire assemblies without cutting off the top, base, or bearing stack. */
+.single-motor-card .project-visual {background:#fff}
+.single-motor-card .project-visual img {object-fit:contain;background:#fff}
+.single-motor-page .feature-figure.media-photo .media-open {background:#fff}
+.single-motor-page .feature-figure.media-photo .media-open img {object-fit:contain;object-position:center center}
+.single-motor-page .gallery-figure .media-open {background:#fff}
+.single-motor-page .gallery-figure .media-open img {object-fit:contain;object-position:center center}
